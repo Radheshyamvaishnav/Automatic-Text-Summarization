@@ -1,7 +1,7 @@
-from heapq import nlargest
+from heapq import nlargest                                       
 from string import punctuation
 
-import pyrebase
+import pyrebase               # Here i have used pyrebse for using Firebase API for database
 import spacy
 from flask import Flask, request, render_template
 from spacy.lang.en.stop_words import STOP_WORDS
@@ -10,8 +10,8 @@ nlp = spacy.load('en_core_web_sm')
 
 app = Flask(__name__)
 
-firebaseConfig = {
-
+firebaseConfig = {                      # If you create firebase account for database then firebase will provide you configuration file for connecting to your database
+                                         # Add your Configuration file data over here.
     "apiKey": "",
     "authDomain": "",
     "databaseURL": "",
@@ -23,7 +23,7 @@ firebaseConfig = {
 
 }
 firebase = pyrebase.initialize_app(firebaseConfig)
-auth = firebase.auth()
+auth = firebase.auth()                               
 
 
 @app.route('/')
@@ -33,7 +33,7 @@ def my_form():
 
 @app.route('/', methods=['GET', 'POST'])
 def register():
-    if request.form.get('button') == 'Register':
+    if request.form.get('button') == 'Register':       # Code for registration page
         try:
             email = request.form['email']
             password = request.form['password']
@@ -47,7 +47,7 @@ def register():
             err = " Email Id Already Exists "
             return render_template('login.html', er=err)
 
-    elif request.form.get('button') == 'Login':
+    elif request.form.get('button') == 'Login':    # Code for Login Page
         suser = request.form.get('emailid')
         spass = request.form.get('pass')
         try:
@@ -56,7 +56,8 @@ def register():
         except:
             errmsg = "Enter Correct Credentials"
             return render_template('login.html',umessage=errmsg )
-    elif request.form.get('button') == 'Forget Password':
+    
+    elif request.form.get('button') == 'Forget Password':          #Code for Forget Password
         return render_template('fp.html')
     elif request.form.get('button') == 'Submit':
         try:
@@ -69,7 +70,7 @@ def register():
     elif request.form.get('button') == 'Register Here':
         return render_template('login.html')
 
-    else:
+    else:                                                     # Text Summarization Code                            
         try:
             if request.method == 'POST':
                 text = request.form['u']
