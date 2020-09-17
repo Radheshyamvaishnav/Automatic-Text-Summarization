@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Automatic Text Summarizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='in.css')}}" >
+  </head>
+  <body>
+  <form action="/" method="post">
+    <div class="hero">
+      <div class="form-box">
+      	<h1 class="head">Automatic Text Summarizer</h1>
+        <br>
+        <h5 style="text-align: center; font:bold 15px agentfb; color:orange; ">{{mmsg}}</h5>
+        <br>
+      	<textarea id="ta" placeholder=" Enter/paste your content over here ...." name="u" ></textarea><br><br>
+        <button class="ibox" id="ibox" type="submit" value="OK" style="color:red;
+  width: 200px;
+  max-height: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  transition:1s;
+  margin-left: 40px;
+  border: 5px solid transparent;">OK</button>
+      </div>
+    </div>
+    </form>
+  </body>
+</html>
+

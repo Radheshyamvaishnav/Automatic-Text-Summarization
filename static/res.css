@@ -1,0 +1,94 @@
+*{
+  margin:0;
+  padding:0;
+  font-family: sans-serif;
+}
+.hero{
+  height: 100%;
+  width:100%;
+  background-image:linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),url(image.jpeg);
+  background-position: center;
+  position: absolute;
+  background-size: cover;
+  }
+  .form-box
+  {
+    width:1000px;
+    height:700px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    margin: 3% auto;
+    background: #fff;
+    padding: 5px;
+    border-radius: 50px;
+    overflow:hidden;
+    opacity: 0.8;
+  }
+.head
+{
+	color:White;
+	margin-left: 230px;
+	margin-right: 100px;
+	width: 550px;
+	height: 50px;
+	background: linear-gradient(45deg,#ffad0f, #ff105f);
+	border-radius: 80px;
+	padding: 5px;
+	box-shadow: 10px 10px 20px 15px #ff61241f;
+	text-align: center;
+	text-indent: inherit;
+	font-family: agentfb;
+}
+.ibox{
+
+  color:red;
+  font-weight: 700;
+  width: 200px;
+  max-height: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  transition:1s;
+  margin-left: 40px;
+  border: 5px solid transparent;
+
+
+}
+.ibox:hover
+{
+  box-shadow: 0 1px 1px 0 red inset, 0 1px 10px red,0 1px 10px 0 red inset, 0 1px 10px red
+}
+
+
+
+#ta{
+	position:relative;
+	width:935px;
+	left:20px;
+	height:520px;
+	margin-bottom: 10px;
+	padding:5px;
+	border:3px solid red;
+	font:bold 15px agentfb;
+	opacity:.7;
+	border-radius: 30px;
+	font-size: 30px;
+
+	border: 5px solid transparent;
+
+	-moz-border-image: -moz-linear-gradient(top left, #ffad0f 0%, #ff105f  100%);
+	-webkit-border-image: -webkit-linear-gradient(top left,#ff105f 0%, #ffad0f 100%);
+	border-image: linear-gradient(to bottom right, #ffad0f 0%, #ff105f 100%);
+
+	border-image-slice: 1;
+	transition: 1s;
+	}
+
+#ta:hover
+{
+  box-shadow: 0 1px 1px 0 red inset, 0 1px 10px red,0 1px 10px 0 red inset, 0 1px 10px red
+}

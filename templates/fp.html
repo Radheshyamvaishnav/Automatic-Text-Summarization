@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forget Password</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/style.css')}}" >
+</head>
+<body>
+    <div class="hero">
+      <div class="form-box" style="">
+         <br><br><br><br> <button  value="Register Here" name="button" style="color:red;
+  width: 200px;
+  max-height: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  transition:1s;
+  margin-left:90px;
+  border: 5px solid transparent;">Register Here</button>
+          <form id="login" name="log" class="input-group" method="post" style=" padding:10px; ">
+            <br> <br><h5 style="text-align: center; font:bold 15px agentfb; color:orange; ">{{rf}}</h5><br>
+          <input type="text"  class="input-field" placeholder="Enter Your Email Id" name = "emailidd" required>
+          <br><br>
+        <button type="submit"  class="submit-btn" name="button" value="Submit">Submit</button>
+          <br><br><h5 style="text-align: center; font:bold 15px agentfb; color:orange; ">After Submiting Check Your Email Reset Your Password Then Login</h5><br>
+
+    </form>
+
+
+    </div>
+
+    </div>
+
+
+
+</body>
+</html>

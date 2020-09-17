@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>LOGIN AND REGISTRATION</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/style.css') }}" />
+  </head>
+  <body>
+    <div class="hero">
+      <div class="form-box">
+        <div class="button-box">
+          <div id="btn"></div>
+              <button type="button" name="button" class="toggle-btn" onclick="login()">Login</button>
+            <button type="button" name="button" class="toggle-btn" onclick="register()">Register</button>
+
+
+        </div>
+        <div class="icons">
+          <a href="https://www.google.com/"><img src="{{ url_for('static', filename='/g.png') }}" alt="www.google.com" ></a>
+
+        </div>
+        <form id="login" name="log" class="input-group" method="post">
+          <input type="text"  class="input-field" placeholder="Email Id" name = "emailid" required>
+          <input type="password"  class="input-field" placeholder="Password" name = "pass" required>
+          <br><br>
+        <button type="submit"  class="submit-btn" name="button" value="Login">Login</button>
+          <br> <br><h5 style="text-align: center; font:bold 15px agentfb; color:orange; ">{{umessage}}</h5><br>
+          <button class="ibox" id="ibox" type="submit" name="button" value="Forget Password" style="color:red;
+  width: 200px;
+  max-height: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  transition:1s;
+  margin-left: 40px;
+  border: 5px solid transparent;">Forget Password</button>
+          <br> <br><h5 style="text-align: center; font:bold 15px agentfb; color:orange; ">{{ems}}</h5>
+        </form>
+        <form id="register"  name="reg" class="input-group" method="post">
+          <input type="text" name="user" class="input-field" placeholder="Username" required>
+          <input type="email" name="email" class="input-field" placeholder="Email Id" required>
+          <input type="password" name="password" class="input-field" placeholder="Password" required>
+          <br><br>
+        <button type="submit"  class="submit-btn" name="button"  value="Register">Register</button>
+          <br><h5 style="text-align: center; font:bold 15px agentfb; color:orange; ">{{er}}</h5>
+
+        </form>
+
+      </div>
+
+    </div>
+    <script type="text/javascript">
+      var x=document.getElementById("login");
+      var y=document.getElementById("register");
+      var z=document.getElementById("btn");
+
+    function register(){
+      x.style.left="-400px";
+      y.style.left="50px";
+      z.style.left="110px";
+    }
+    function login(){
+      x.style.left="50px";
+      y.style.left="450px";
+      z.style.left="0px";
+    }
+</script>
+  </body>
+</html>
